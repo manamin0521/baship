@@ -15,7 +15,6 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -50,7 +49,7 @@
                 </div>
             </form>
         </p>
-        <div class="panel panel-default">
+        <div class="panel panel-default" id="first-place">
             <div class="panel-heading">
                 <h3 class="panel-title">場所の名前</h3>
             </div>
@@ -76,7 +75,7 @@
                     <!-- 緯度・経度  -->
                     <input type="hidden" id="lat_go-button" name="lat" value="">
                     <input type="hidden" id="lng_go-button" name="lng" value="">
-                    <button type="submit" class="btn btn-default pull-right" aria-label="Left Align">
+                    <button type="button" class="btn btn-default pull-right go-button" aria-label="Left Align" onclick="go(1)">
                         行く <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
                     </button>
                 </form>
@@ -85,7 +84,7 @@
                 片道：30分、滞在時間：2時間
             </div>
         </div>
-        <div class="panel panel-default">
+        <div class="panel panel-default" id="second-place">
             <div class="panel-heading">
                 <h3 class="panel-title">場所の名前</h3>
             </div>
@@ -111,7 +110,7 @@
                     <!-- 緯度・経度  -->
                     <input type="hidden" id="lat_go-button" name="lat" value="">
                     <input type="hidden" id="lng_go-button" name="lng" value="">
-                    <button type="submit" class="btn btn-default pull-right" aria-label="Left Align">
+                    <button type="button" class="btn btn-default pull-right go-button" aria-label="Left Align" onclick="go(2)">
                         行く <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
                     </button>
                 </form>
@@ -121,10 +120,11 @@
             </div>
         </div>
     </div>
-
+    <canvas class="fireworks"></canvas>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="./javascripts/location.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script>
+    <script src="./javascripts/all.js"></script>
 
 </body>
 
