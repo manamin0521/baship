@@ -38,7 +38,7 @@
 
     <div class="container">
         <p>
-            <form method="POST" action="" name="form">
+            <form action="" method="POST" name="form">
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon1">晴れ 07月10日（日） 2:36 - </span>
                     <input type="text" class="form-control" placeholder="5:36" aria-describedby="sizing-addon1" name="empty_time">
@@ -70,9 +70,16 @@
                         </p>
                     </div>
                 </div>
-                <button type="button" class="btn btn-default pull-right" aria-label="Left Align">
-                    行く <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                </button>
+                <form action="" method="post" name="go-button">
+                    <!-- value = spot_id -->
+                    <input type="hidden" name="spot_id" value="1">
+                    <!-- 緯度・経度  -->
+                    <input type="hidden" id="lat_go-button" name="lat" value="">
+                    <input type="hidden" id="lng_go-button" name="lng" value="">
+                    <button type="submit" class="btn btn-default pull-right" aria-label="Left Align">
+                        行く <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </button>
+                </form>
             </div>
             <div class="panel-footer">
                 片道：30分、滞在時間：2時間
@@ -98,9 +105,16 @@
                         </p>
                     </div>
                 </div>
-                <button type="button" class="btn btn-default pull-right" aria-label="Left Align">
-                    行く <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                </button>
+                <form action="" method="post" name="go-button">
+                    <!-- value = spot_id をバインド -->
+                    <input type="hidden" name="spot_id" value="1">
+                    <!-- 緯度・経度  -->
+                    <input type="hidden" id="lat_go-button" name="lat" value="">
+                    <input type="hidden" id="lng_go-button" name="lng" value="">
+                    <button type="submit" class="btn btn-default pull-right" aria-label="Left Align">
+                        行く <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </button>
+                </form>
             </div>
             <div class="panel-footer">
                 片道：30分、滞在時間：2時間
