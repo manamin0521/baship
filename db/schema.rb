@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709173220) do
+ActiveRecord::Schema.define(version: 20160709210743) do
 
   create_table "spots", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.text     "body",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "vist_logs", force: :cascade do |t|
+    t.integer  "spot_id",    limit: 4
+    t.integer  "whether",    limit: 4
+    t.integer  "group_kind", limit: 4
+    t.integer  "season",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end
