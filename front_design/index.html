@@ -38,10 +38,12 @@
 
     <div class="container">
         <p>
-            <form method="POST" action="#">
+            <form method="POST" action="" name="form">
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon1">晴れ 07月10日（日） 2:36 - </span>
-                    <input type="text" class="form-control" placeholder="5:36" aria-describedby="sizing-addon1">
+                    <input type="text" class="form-control" placeholder="5:36" aria-describedby="sizing-addon1" name="empty_time">
+                    <input type="hidden" id="lat_form" name="lat" value="">
+                    <input type="hidden" id="lng_form" name="lng" value="">
                     <span class="input-group-btn">
                             <button class="btn btn-default" type="submit">更新</button>
                         </span>
@@ -108,7 +110,7 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="./javascripts/all.js"></script>
+    <script src="./javascripts/location.js"></script>
 
 </body>
 
