@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :visit_logs
+  root "spots#index"
 
-  resources :spots
+  post "root", to: 'spots#index/(:x)/(:y)'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
