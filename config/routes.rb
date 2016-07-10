@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'go/index'
+
   resources :visit_logs
 
   resources :spots
