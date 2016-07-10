@@ -23,7 +23,7 @@
 
 <div class="container">
     <p>
-        <form action="" method="POST" name="form">
+        <form action="/" method="POST" name="form">
             <div class="input-group">
                 <span class="input-group-addon" id="sizing-addon1">晴れ 07月10日（日） 2:36 -
                 </span>
@@ -38,7 +38,7 @@
     </p>
     <div class="panel panel-default" id="first-place">
         <div class="panel-heading">
-            <h3 class="panel-title">場所の名前</h3>
+            <h3 class="panel-title"><%= @results[0][1] %></h3>
         </div>
         <div class="panel-body">
             <p class="text-right">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="media-body">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <%= @results[1][2] %>
                     </p>
                 </div>
             </div>
@@ -70,12 +70,12 @@
             </form>
         </div>
         <div class="panel-footer">
-            片道：30分、滞在時間：2時間
+            片道：<%= @results[0][6] * 60 %>分、滞在時間：2時間
         </div>
     </div>
     <div class="panel panel-default" id="second-place">
         <div class="panel-heading">
-            <h3 class="panel-title">場所の名前</h3>
+            <h3 class="panel-title"><%= @results[1][1] %></h3>
         </div>
         <div class="panel-body">
             <p class="text-right">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="media-body">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <%= @results[1][2] %>
                     </p>
                 </div>
             </div>
@@ -107,11 +107,10 @@
             </form>
         </div>
         <div class="panel-footer">
-            片道：30分、滞在時間：2時間
+            片道：<%= @results[1][6] * 60 %>分、滞在時間：2時間
         </div>
     </div>
 </div>
-<canvas class="fireworks"></canvas>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script>

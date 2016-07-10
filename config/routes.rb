@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "spots#index"
 
-  post "/:lat/:lng", to: 'spots#genMap'
+  get "/:lat/:lng", to: 'spots#genMap'
 
   get "spots/:spot_id", to: 'spots#spot'
 
