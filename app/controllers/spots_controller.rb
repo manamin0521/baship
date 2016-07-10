@@ -11,7 +11,6 @@ class SpotsController < ApplicationController
       puts "緯度・経度を取得してアルゴリズムをかけてスコアが高い順に返す"
       params[:lat]
       params[:lng]
-
       # SQL
 
       # ビューに渡す値
