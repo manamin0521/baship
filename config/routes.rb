@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'go/index'
+  root "spots#index"
 
-  resources :visit_logs
+  post "/:lat/:lng", to: 'spots#genMap'
 
-  resources :spots
+  get "spots/:spot_id", to: 'spots#spot'
+
+  post "go/:lat/:lng/:spot_id", to: 'spots#go'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
