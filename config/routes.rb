@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root "spots#index"
 
-  post "root", to: 'spots#index/(:x)/(:y)'
+  post "/:lat/:lng", to: 'spots#genMap'
+
+  get "spots/:spot_id", to: 'spots#spot'
+
+  post "go/:lat/:lng/:spot_id", to: 'spots#go'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
