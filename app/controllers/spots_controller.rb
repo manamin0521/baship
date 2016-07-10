@@ -12,8 +12,6 @@ class SpotsController < ApplicationController
       params[:lat]
       params[:lng]
       # SQL
-      require 'mysql2'
-
       client  = ActiveRecord::Base.connection
 
       # TODO: WHERE句の末尾の3を変更
@@ -27,9 +25,7 @@ class SpotsController < ApplicationController
       ")
 
       # ビューに渡す値
-      # @xxx = 123
-      puts "-------" * 20
-      p @results
+      puts @results.to_a
       render :index
   end
 

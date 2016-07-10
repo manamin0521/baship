@@ -38,7 +38,7 @@
     </p>
     <div class="panel panel-default" id="first-place">
         <div class="panel-heading">
-            <h3 class="panel-title">場所の名前</h3>
+            <h3 class="panel-title"><%= @results[0][1] %></h3>
         </div>
         <div class="panel-body">
             <p class="text-right">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="media-body">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <%= @results[1][2] %>
                     </p>
                 </div>
             </div>
@@ -70,12 +70,12 @@
             </form>
         </div>
         <div class="panel-footer">
-            片道：30分、滞在時間：2時間
+            片道：<%= @results[0][6] * 60 %>分、滞在時間：2時間
         </div>
     </div>
     <div class="panel panel-default" id="second-place">
         <div class="panel-heading">
-            <h3 class="panel-title">場所の名前</h3>
+            <h3 class="panel-title"><%= @results[1][1] %></h3>
         </div>
         <div class="panel-body">
             <p class="text-right">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="media-body">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <%= @results[1][2] %>
                     </p>
                 </div>
             </div>
@@ -107,7 +107,7 @@
             </form>
         </div>
         <div class="panel-footer">
-            片道：30分、滞在時間：2時間
+            片道：<%= @results[1][6] * 60 %>分、滞在時間：2時間
         </div>
     </div>
 </div>
