@@ -10,6 +10,11 @@ class SpotsController < ApplicationController
   # GET /spots/1
   # GET /spots/1.json
   def show
+    require 'mysql2'
+
+    client = Mysql2::Client.new(:host => "localhost", :username => "root", :database => 'bashit_db')
+
+    @result = client.query("SELECT * FROM spots WHERE `id` = #{params[:id]}").first
   end
 
   # GET /spots/new
