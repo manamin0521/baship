@@ -7,14 +7,29 @@ class SpotsController < ApplicationController
       puts "index"
   end
 
-  def gemMap
+  def genMap
       puts "緯度・経度を取得してアルゴリズムをかけてスコアが高い順に返す"
       params[:lat]
       params[:lng]
       # SQL
+      require 'mysql2'
+
+      client  = ActiveRecord::Base.connection
+
+      # TODO: WHERE句の末尾の3を変更
+      @results = client.select_rows("
+        SELECT
+          *,
+          GLength(GeomFromText(CONCAT('LineString(139.0808219 35.1429357,', X(latlng), ' ', Y(latlng),')'))) * 112.12 / 5 As dist
+        FROM spots
+        WHERE
+          GLength(GeomFromText(CONCAT('LineString(139.0808219 35.1429357,', X(latlng), ' ', Y(latlng),')'))) * 112.12 / 5 < 3
+      ")
 
       # ビューに渡す値
       # @xxx = 123
+      puts "-------" * 20
+      p @results
       render :index
   end
 
