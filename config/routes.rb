@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :visit_logs
+
   resources :spots
 
   # The priority is based upon order of creation: first created -> highest priority.

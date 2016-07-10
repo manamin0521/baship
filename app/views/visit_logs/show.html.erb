@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spot:</strong>
+  <%= @visit_log.spot_id %>
+</p>
+
+<p>
+  <strong>Weather:</strong>
+  <%= @visit_log.weather %>
+</p>
+
+<p>
+  <strong>Group kind:</strong>
+  <%= @visit_log.group_kind %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @visit_log.integer %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @visit_log.season %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @visit_log.integer %>
+</p>
+
+<%= link_to 'Edit', edit_visit_log_path(@visit_log) %> |
+<%= link_to 'Back', visit_logs_path %>

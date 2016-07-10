@@ -1,0 +1,41 @@
+<%= form_for(@visit_log) do |f| %>
+  <% if @visit_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@visit_log.errors.count, "error") %> prohibited this visit_log from being saved:</h2>
+
+      <ul>
+      <% @visit_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :spot_id %><br>
+    <%= f.number_field :spot_id %>
+  </div>
+  <div class="field">
+    <%= f.label :weather %><br>
+    <%= f.number_field :weather %>
+  </div>
+  <div class="field">
+    <%= f.label :group_kind %><br>
+    <%= f.text_field :group_kind %>
+  </div>
+  <div class="field">
+    <%= f.label :integer %><br>
+    <%= f.text_field :integer %>
+  </div>
+  <div class="field">
+    <%= f.label :season %><br>
+    <%= f.text_field :season %>
+  </div>
+  <div class="field">
+    <%= f.label :integer %><br>
+    <%= f.text_field :integer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
